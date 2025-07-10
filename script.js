@@ -6,7 +6,7 @@ createbutton.addEventListener("click", ()=> {
     let inputbox = document.createElement("p");
     let img = document.createElement("img");
     inputbox.className = "input-box";
-    inputbox.setAttribute("contenteditable","true");  //This allows users to click inside the <p> and edit its content dynamically.
+    inputbox.setAttribute("contenteditable","true"); 
     img.src = "./assets/trash-can.png";
     notescontainer.appendChild(inputbox).appendChild(img);
 })
@@ -19,7 +19,7 @@ notescontainer.addEventListener("click",function(e){
     else if(e.target.tagName === "P"){          
         notes = document.querySelectorAll(".input-box");
         notes.forEach(nt => {   
-            nt.onkeyup = function(){   //onkeyup triggers saveData() every time the user types something.
+            nt.onkeyup = function(){  
                 saveData();
             }
         })
@@ -35,7 +35,7 @@ function showTask(){
 showTask();
 
 document.addEventListener("keydown",event=>{
-    if(event.key === "Enter"){       //It manually inserts a <br> tag, ensuring proper formatting,The cursor moves to the next line properly.
+    if(event.key === "Enter"){     
         document.execCommand("insertlinebreak");
         event.preventDefault();
     }
