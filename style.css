@@ -62,3 +62,15 @@
     right: 15px;
     cursor: pointer;
 }
+
+@media (max-width: 477px) {
+    .container{
+        padding-left: 2%;
+    }
+    .input-box{
+        width: 90%;
+    }
+    .container h1{
+        padding-left: 60px;
+    }
+}
